@@ -1,0 +1,49 @@
+body {
+    background-image: url("./Media/stage.jpg");
+    background-repeat: no-repeat ;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+img {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.duck{
+     animation:forward 7s linear infinite;
+     border-radius: 10%;
+
+}
+
+.man{
+    width: 15%;
+    animation: backward 4s linear infinite;
+    border-radius: 10%;
+
+}
+
+
+@keyframes forward {
+
+    0%{
+        transform: translateX(-100px) ;
+    }
+    100%{
+
+        transform: translateX(1200px);
+    }
+}
+
+@keyframes backward {
+
+    0%{
+        transform: translateX(-100px) ;
+    }
+    100%{
+
+        transform: translateX(1200px);
+    }
+}
