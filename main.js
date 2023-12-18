@@ -2,8 +2,8 @@
 //intializing intial variables 
 let duckID = 0;
 let manID = 0;
-let randomDuck = randomNumber(2000, 3000);
-let randomMan = randomNumber(2000, 3000);
+let randomDuck = randomNumber(2000, 4000);
+let randomMan = randomNumber(5000, 6000);
 let score = 0;
 let lives = 2
 // get the element by id
@@ -68,7 +68,7 @@ function createDuck() {
 let interval = setInterval(function () {
   
   
-  randomDuck = randomNumber(2000, 4000);
+  randomDuck = randomNumber(5000, 6000);
   console.log(randomDuck)
   createDuck();
 
@@ -143,7 +143,7 @@ setInterval(function (){
     let intervall = setInterval(function () {
       createMan();
       
-      randomDuck = randomNumber(500, 4000);
+      randomDuck = randomNumber(4000, 5000);
     
     
     }, randomMan);
