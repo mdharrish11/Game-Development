@@ -131,7 +131,7 @@ setInterval(function (){
     clickSound.play();
         if(lives==0){
           
-          localStorage.setItem("score",score);
+          localStorage.setItem("score",score); // score been stored in local storage so that we can use in another js page
           window.location.href = "gameover.html"; //When life became 0 the window will redirect to game over page
 
         }

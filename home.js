@@ -18,12 +18,13 @@ document.getElementById("instruction-icon").addEventListener("click",()=>{
 document.getElementById("exit").addEventListener("click",()=>{
     document.getElementById('instruction-page').style.display = "none "
 });
+//instruction page wont be diplayed when the exit logo clicked
 
 document.getElementById("play-btn").addEventListener("click",()=>{
     if(userInput.value == ""){
         alert("Enter your name");
     }else{
-        localStorage.setItem('playerName',userInput.value);
+        localStorage.setItem('playerName',userInput.value); // storing the user input in local storage
         window.location.href = "main.html";
     }
 });
