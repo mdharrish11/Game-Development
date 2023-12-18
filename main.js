@@ -1,15 +1,19 @@
 
-
+//intializing intial variables 
 let duckID = 0;
 let manID = 0;
 let randomDuck = randomNumber(2000, 3000);
 let randomMan = randomNumber(2000, 3000);
 let score = 0;
 let lives = 2
+// get the element by id
 let game_body = document.getElementById('game-body')
+
+// Two Audios been stored in a const for later use 
 const clickSound=new Audio('./Media/mansound.mp3')
 const clickSound2=new Audio('./Media/quack.mp3')
 
+//Audio const created by been looped 
 const bgm = new Audio("./Media/theme.mp3");
 bgm.loop = true;
 bgm.play();
@@ -52,15 +56,15 @@ function createDuck() {
   duck.onclick = function () {
     destroyDuck(duck); //duck destroyed everytime we click duck
     score++  //score increase everytime we click on duck
-    updateScore()
+    updateScore() //update the score in the screen
     clickSound2.pause();
-    clickSound2.currentTime=0;
+    clickSound2.currentTime=0; //click sound been used and current time set 0 so everytime been clicked it will start again
     clickSound2.play();
   };
 
 }
 
-// setting an interval for creating duck with randomduck function
+// setting an interval for creating duck with randomduck
 let interval = setInterval(function () {
   
   
@@ -108,20 +112,20 @@ setInterval(function (){
 
 
 
-
+// create man function
 
     function createMan() {
     
       let man = document.createElement("img");
-      manID++
+      manID++ //id incremented every time man created
       man.src = "./Media/man.gif";
       man.classList = "man";
       man.setAttribute("id", manID);
       game_body.appendChild(man);
       man.onclick = function () {
-        destroyMan(man);
-        lives--
-        updateLive()
+        destroyMan(man);  // destroy the man when clicked
+        lives--   // lives reduced
+        updateLive() //lives updated to get displayed in the screen
         clickSound.pause();
     clickSound.currentTime=0.3;
     clickSound.play();
@@ -135,6 +139,7 @@ setInterval(function (){
     
     }
     
+    //setting interval for creating man
     let intervall = setInterval(function () {
       createMan();
       
@@ -143,14 +148,15 @@ setInterval(function (){
     
     }, randomMan);
     
-    
+    // function destroy man
     function destroyMan(man) {
         man.style.display = "none";
         console.log("Destroyed: "+ manID)
         man.remove();
         
       }
-      
+
+    // function touched right
     function touchedRight2(man) {
     
       if (man.getBoundingClientRect().right >= window.innerWidth) {
@@ -158,7 +164,9 @@ setInterval(function (){
       }
     }
     
-    
+    //set interval function in loop using man id so that it check every 0.5 sec the man touches the rigth screen also null
+// null condition used so that the checking start from when there is no duck present at start.
+//And destory the man with the id when touches right side of screen
     setInterval(function (){
         console.log(manID)
             for(let i = 1; i <= manID; i++) {
