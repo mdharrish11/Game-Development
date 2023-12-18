@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="main.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
 </head>
 <body>
-    <!-- <img class="duck" src="duck.gif" /> -->
-   
-    <script src="main.js"></script>
+    <div id="bg-img">
+
+        <div id="game-logo">
+        <img id="logo" src="./Media/game name.png" alt="logo">
+        </div>
+
+        <div id="player-name-btn">
+            <h2 id="name">Player Name</h2>
+            <input id="user-input" type="text" placeholder="User name">
+            <h2 id="name">Nick Name</h2>
+            <input id="user-input2" type="text" placeholder="Nick name">
+            <img id="play-btn" src="./Media/start.png">
+        </div>
+
+        <div>
+            
+            <img id="instruction-icon" src="./Media/info.png" alt="instruction">
+        </div>
+
+
+        <div id="instruction-page">
+                <img id="exit" src="./Media/exit-page.png"/>
+            <div id="ins-box">
+                <h1 id="ins-txt">Instructions</h1>
+                <p><li class="ins-point">Shoot by clicking the duck to increase your score.</li>
+
+                    <li class="ins-point">Shoot by clicking the man, your lives gets detected.</li>
+                                        
+                    <li class="ins-point">Set your score or beat them</li>
+            </div>
+        </div>
+    </div>
+
+    <script src="./home.js"></script>
 </body>
 </html>

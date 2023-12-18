@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+    background-repeat: no-repeat;
+    
+}
+#bg-img{
+    height:100vh;
+    
+}
+#logo{
+    height: 170px;
+    display: block;
+    margin:auto;
+    margin-top: 30px;
+
+}
+
+#player-name-btn{
+    margin: 50px auto;
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    height: 350px;
+    width: 400px;
+    border-radius: 25px;
+}
+#user-input{
+    width:300px;
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+#user-input2{
+    width:300px;
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+
+
+
+#play-btn{
+    height: 140px;
+    width:140px;
+    margin:15px auto;
+}
+#name{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+input[type=text]{
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 12px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+input[type=text]:focus{
+    border-color: dodgerblue;
+    box-shadow: 0 0 12px 0 dodgerblue;
+}
+
+#audio-setting{
+    height: 100px;
+    margin-left: 30px;
+    margin-top: -70px;
+}
+#instruction-icon{
+    height: 260px;
+    margin-left: 20px;
+    
+}
+#instruction-page{
+    display:  none;
+    position:absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.918);
+    overflow: hidden;
+}
+h1{
+    font-size: 60px;
+    color: red;
+    text-align: center;
+
+}
+.ins-point{
+    font-size: 30px;
+    color: white;
+    margin: 30px;
+    font-weight: bold;
+}
+#tj-inspage{
+    height: 50px;
+    margin: 10px;
+}
+#ins-box{
+    margin-top: 20px;
+}
+#ins-txt{
+    position: relative;
+}
+#exit{
+   
+    height: 80px;
+    margin:0 1100px;
+}
+
+
+@media (max-width:400px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        background-size: 400% 350%;
+    }
+    #bg-img{
+        height: 200vh;
+        width:200vw;
+    }
+    #player-name-btn{
+        height: 500px;
+        width: 600px;
+        margin-top: 200px;
+    }
+    #player-name-btn input{
+        height: 80px;
+        width: 500px;
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    #player-name-btn #name{
+        font-size: 50px;
+    }
+    #player-name-btn #play-btn{
+        height:150px;
+        width:180px;
+    }
+    #instruction-icon{
+        margin-top: 300px;
+    }
+    #instruction-page{
+        height: 201vh;
+        width: 113vh;
+    }
+    #exit-icon{
+        margin-left: 440px;
+    }
+    #ins-box{
+        margin-top: 150px;
+    }
+   
+}

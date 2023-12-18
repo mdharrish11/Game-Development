@@ -1,9 +1,19 @@
 body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bitter', serif;
+    overflow: hidden;
     background-image: url("./Media/stage.jpg");
     background-repeat: no-repeat ;
     background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
+    
+}
+
+.game {
+    overflow: hidden;
+    cursor: url('https://img.informer.com/icons/png/32/113/113532.png') 16 16, crosshair;
 }
 
 img {
@@ -13,6 +23,7 @@ img {
 }
 
 .duck{
+    width: 10%;
      animation:forward 7s linear infinite;
      border-radius: 10%;
 
@@ -24,6 +35,34 @@ img {
     border-radius: 10%;
 
 }
+
+
+#lives {
+
+    color: azure;
+    background-color: black;
+    font-size: 40px;
+    position: absolute;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+#score {
+
+    color: azure;
+    background-color: black;
+    font-size: 40px;
+    position: absolute;
+    padding: 5px;
+    margin-left: 320px;
+    margin-top: 20px;
+}
+
+
+
 
 
 @keyframes forward {
